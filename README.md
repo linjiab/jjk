@@ -11,4 +11,4 @@ pinMode(腳位，INPUT/OUTPUT);</p>
 # 2020/09/08
 四顆led燈同時閃爍 </p>
 電路圖如下:</p>
-![image]
+![image](https://github.com/linjiab/jjk/blob/master/3C43C5C3-F08F-446A-87BA-AA9F76CF39A6.jpeg)</p>
