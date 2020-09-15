@@ -62,3 +62,24 @@ delay(100);
 }
 ```
 ![image](https://github.com/linjiab/jjk/blob/master/5032EBAB-025A-4E30-8196-7A6F6AF086A8.jpeg)
+# 2020/09/15-4
+led呼吸燈 </p>
+電路圖如下:</p>
+```c++
+int b = 0;
+int f = 1;
+void setup() {
+  pinMode(5,OUTPUT);
+}
+
+void loop() {
+  analogWrite(5,b);
+  b = b + f;
+  if (b <=0)
+     f = -f;
+  if (b >= 255)
+    f = -f;
+  delay(5);
+}
+```
+![image]()
