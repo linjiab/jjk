@@ -39,3 +39,26 @@ delay(500);
 }
 ```
 ![image](https://github.com/linjiab/jjk/blob/master/9DE3D0C7-FE75-4980-B5A8-2969A3BC5F92.jpeg)
+# 2020/09/15-3
+led跑馬燈 </p>
+電路圖如下:</p>
+```c++
+int LED=1;
+void setup() {
+  for (int i=10 ;i>1;i--)
+   pinMode(i,OUTPUT); 
+}
+void loop() {
+    // put your main code here, to run repeatedly: 
+    for(int i=1; i<10; i++)
+      digitalWrite(i,HIGH);
+ if (LED<=10)
+      digitalWrite(LED,LOW);
+else
+LED=1;
+LED++;
+
+delay(100);
+}
+```
+![image](https://github.com/linjiab/jjk/blob/master/5032EBAB-025A-4E30-8196-7A6F6AF086A8.jpeg)
