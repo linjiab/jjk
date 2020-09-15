@@ -12,3 +12,30 @@ pinMode(腳位，INPUT/OUTPUT);</p>
 四顆led燈同時閃爍 </p>
 電路圖如下:</p>
 ![image](https://github.com/linjiab/jjk/blob/master/3C43C5C3-F08F-446A-87BA-AA9F76CF39A6.jpeg)</p>
+# 2020/09/15
+led跑馬燈 </p>
+電路圖如下:</p>
+![image](https://github.com/linjiab/jjk/blob/master/4C09AA91-E8FF-4E6C-A11C-27CAA004FFC7.jpeg)</p>
+# 2020/09/15-2
+led跑馬燈 </p>
+電路圖如下:</p>
+```c++
+int LED=10;
+void setup() {
+  for (int i=1 ;i<10;i++)
+   pinMode(i,OUTPUT); 
+}
+void loop() {
+    // put your main code here, to run repeatedly: 
+    for(int i=10; i>1; i--)
+      digitalWrite(i,HIGH);
+ if (LED>=1)
+      digitalWrite(LED,LOW);
+else
+LED=10;
+LED--;
+
+delay(500);
+}
+```
+![image](https://github.com/linjiab/jjk/blob/master/9DE3D0C7-FE75-4980-B5A8-2969A3BC5F92.jpeg)
