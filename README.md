@@ -82,7 +82,7 @@ void loop() {
   delay(5);
 }
 ```
-![image]()
+![image](https://github.com/linjiab/jjk/blob/master/24535E85-6D40-43D5-B7CB-A48F70015902.jpeg)
 # 2020/09/22-1
 按鈕讓LED亮起,reset鍵滅 </p>
 電路圖如下:</p>
