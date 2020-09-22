@@ -136,3 +136,64 @@ void loop() {
 }
 ```
 ![image](https://github.com/linjiab/jjk/blob/master/B0ADCEE6-61AF-4D8F-BB1C-1E06DF3E76D4.jpeg)
+# 2020/09/22-3
+</p>
+電路圖如下:</p>
+```c++
+byte ledpin[8]={3,4,5,6,7,8,9,10};
+int jj =1 ,a=-1;
+
+void setup()
+{
+  for(int i=0;i<8;i++)pinMode(ledpin[i],OUTPUT);
+  for(int i=0;i<8;i++)digitalWrite(ledpin[i],1);
+  pinMode(2,INPUT);
+  digitalWrite(2,1);
+}
+
+void loop() 
+{
+  if(!digitalRead(2))
+  {
+    while(!digitalRead(2))delay(20);
+    if(!jj)
+    {
+      a++;
+      jj=1;
+    }
+  }
+  else
+  {
+    jj=0;
+    switch(a)
+    {
+      case 0:
+        for(int i=0;i<8;i++)
+        {
+          for(int j=0;j<8;j++)digitalWrite(ledpin[j],1);
+          digitalWrite(ledpin[i],0);
+          delay(100);
+        }
+      break;
+       
+      case 1:
+        for(int i=7;i>-1;i--)
+          {
+            for(int j=0;j<8;j++)digitalWrite(ledpin[j],1);
+            digitalWrite(ledpin[i],0);
+            delay(100);
+          }
+      break;
+        
+      case 2:
+        for(int i=0;i<8;i++)digitalWrite(ledpin[i],1);
+      break;
+       
+      case 3:
+        a=0;
+      break;
+    }
+  }
+}
+```
+![image]()
