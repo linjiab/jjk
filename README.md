@@ -83,3 +83,56 @@ void loop() {
 }
 ```
 ![image]()
+# 2020/09/22-1
+按鈕讓LED亮起,reset鍵滅 </p>
+電路圖如下:</p>
+```c++
+void setup() {
+ pinMode(2,INPUT);
+ pinMode(3,OUTPUT);
+ digitalWrite(3,HIGH);
+ digitalWrite(2,HIGH);
+}
+
+void loop() {
+  if(digitalRead(2) == 0)
+  {
+    digitalWrite(3,LOW);
+  }
+  /*else 
+  {
+    digitalWrite(3,HIGH);
+  }*/
+}
+```
+![image](https://github.com/linjiab/jjk/blob/master/B0ADCEE6-61AF-4D8F-BB1C-1E06DF3E76D4.jpeg)
+# 2020/09/22-2
+切換LED亮或滅 </p>
+電路圖如下:</p>
+```c++
+int j=1,jj=1;
+void setup() {
+ pinMode(2,INPUT);
+ pinMode(3,OUTPUT);
+ digitalWrite(2,HIGH);
+ digitalWrite(3,HIGH);
+}
+void loop() {
+  if(!digitalRead(2))
+  {
+    while(!digitalRead(2))
+    delay(20);
+    jj=0;
+  }
+  else
+  {
+    if(!jj)
+    {
+      jj=1;
+      j^=1;
+    }
+  }
+  digitalWrite(3,j);
+}
+```
+![image](https://github.com/linjiab/jjk/blob/master/B0ADCEE6-61AF-4D8F-BB1C-1E06DF3E76D4.jpeg)
