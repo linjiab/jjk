@@ -136,7 +136,7 @@ void loop() {
 }
 ```
 ![image](https://github.com/linjiab/jjk/blob/master/B0ADCEE6-61AF-4D8F-BB1C-1E06DF3E76D4.jpeg)
-# 2020/09/22-3
+# 2020/09/29
 電路圖如下:</p>
 ```c++
 byte ledpin[8]={3,4,5,6,7,8,9,10};
